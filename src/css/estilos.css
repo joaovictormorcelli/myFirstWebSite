@@ -3,10 +3,15 @@ body{
     background-image: url(/src/imagens/fundo-site.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh;
+    gap: 30px;
 } 
 
 .cabecalho{
-    background-color: red;
+    
     display: flex;
     justify-content: center;
 }
@@ -21,19 +26,22 @@ body{
     display: flex;
     flex-direction:column;
     padding: 12px;
+    gap: 5px;
+    position: absolute;
 
 }
 
 .cartao.selecionado{
     opacity: 1;
-
+    z-index: 1;
 }
 
 .lista-personagens{
-    background-color: blue;
+    position: relative;
     width: 300px;
     height: 500px;
     border-radius: 10px;
+    
 }
 
 .slider{
@@ -56,7 +64,7 @@ body{
 .cartao .estrela{
     width: 20px;
     height: 20px;
-    background-image: url(/src/imagens/nivel-carta.png);
+    background-image: url(../imagens/nivel-carta.png);
     background-size: contain;
     background-repeat: no-repeat;
     display: inline-block;
@@ -65,7 +73,6 @@ body{
 .cartao .nivel-carta{
     display: flex;
     justify-content: flex-end;
-    background-color: crimson;
     margin-right: 10px;
     gap: 5px;
 }
@@ -73,11 +80,10 @@ body{
 .cartao .imagem-carta{
     max-width: 260px;   
     align-self: center;
-
+    
 }
 
 .cartao .informacoes{
-    
     border-radius: 5px;
     max-width: 300px;
     color: black;
@@ -88,9 +94,85 @@ body{
 }
 
 .cartao .informacoes-ataque{
-    background-color: seagreen;
     display: flex;
     justify-content: flex-end;
     gap: 5px;
     padding: 10px;
+    font-size: 13px;
+}
+
+.cartao .informacoes .descricao{
+    border-bottom: 1px solid #000000;
+    padding: 10px;
+    max-height: 95px;
+    overflow-y: scroll;
+    font-size: 13px;
+}
+
+.fundo-1{
+    background: url(/src/imagens/fundo-1.jpg) no-repeat;
+}
+
+.fundo-2{
+    background: url(/src/imagens/fundo-2.jpg) no-repeat;
+}
+
+.fundo-3{
+    background: url(/src/imagens/fundo-3.jpg) no-repeat;
+}
+
+.fundo-4{
+    background: url(/src/imagens/fundo-4.jpg) no-repeat;
+}
+
+.fundo-5{
+    background: url(/src/imagens/fundo-5.jpg) no-repeat;
+}
+
+.fundo-6{
+    background: url(/src/imagens/fundo-6.jpg) no-repeat;
+}
+
+.fundo-7{
+    background: url(/src/imagens/fundo-7.jpg) no-repeat;
+}
+
+
+.btn-seta{
+    background-color: white;
+    width: 70px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    border: 0;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+
+.btn-seta.btn-voltar{
+    transform: rotateY(180deg);
+}
+
+.btn-seta:hover{
+    background-color: #8351fe;
+}
+
+body::-webkit-scrollbar-track{
+    background-color: #c08057;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #c08057;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #c08057;
 }
